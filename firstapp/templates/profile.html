@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 style="text-align: center;">This is Profile Pages</h1>
+<br>
+<a class='btn btn-warning' href="{% url "passchange" %}">Password Changes</a>
+<a class='btn btn-warning' href="{% url "passchange2" %}">Password Changes 2</a>
+<div style="text-align: center;">
+    {% if messages %}
+    
+    {% for m in  messages %}
+   
+      <h4 {% if m.tags %} class='{{m.tags}}' {% endif %}>{{m}}</h4>
+
+
+    {% endfor %}
+    {% endif %}
+</div>
+{% endblock  %}
+
+
+
+
+
